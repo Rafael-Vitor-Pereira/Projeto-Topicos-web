@@ -7,10 +7,14 @@
     <title>Locadora de Filmes</title>
 
     <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
-
     <link rel="stylesheet" href="{{asset('css/loading.css')}}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </head>
 <body>
+    {{-- Msg de sucesso as cadastrar ou editar --}}
+    <x-msg-success />
+
     {{-- Menu lateral --}}
     <x-menu />
 

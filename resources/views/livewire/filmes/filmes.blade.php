@@ -39,4 +39,7 @@
             @endforelse
         </tbody>
     </table>
+
+    {{-- Botão adicionar --}}
+    <x-btn-add href="/Filmes/Cadastrar" wire:navigate />
 </section>

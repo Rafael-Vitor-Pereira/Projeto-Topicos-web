@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Filmes\Filmes;
+use App\Livewire\Filmes\Formulario;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,3 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::redirect('/', '/Filmes');
 
 Route::get('/Filmes', Filmes::class);
+
+Route::get('/Filmes/Cadastrar', Formulario::class);

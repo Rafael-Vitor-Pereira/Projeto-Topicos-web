@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('films', function (Blueprint $table) {
             $table->id();
             $table->string('nome', 50);
-            $table->string('classificacao');
+            $table->string('classificacao', 3);
             $table->decimal('diaria', 5, 2);
+            $table->longText('sinopse');
             $table->timestamps();
         });
     }
