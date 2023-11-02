@@ -22,6 +22,7 @@
                 <th class="px-4 py-3">NOME</th>
                 <th class="px-4 py-3">CLASSIFICAÇÃO</th>
                 <th class="px-4 py-3">DIÁRIA</th>
+                <th class="px-4 py-3"></th>
             </tr>
         </thead>
         <tbody>
@@ -31,6 +32,10 @@
                     <td class="px-4 py-3">{{$filme->nome}}</td>
                     <td class="px-4 py-3">{{$filme->classificacao}}</td>
                     <td class="px-4 py-3">R$ {{$filme->diaria}}</td>
+                    <td class="px-4 py-3">
+                        <x-btn-editar href="/Filmes/{{$filme->id}}/editar" />
+                        <x-btn-excluir wire:click="deletar({{$filme->id}})" wire:confirm="Tem certeza que deseja excluir esse filme?" />
+                    </td>
                 </tr>
             @empty
                 <tr>

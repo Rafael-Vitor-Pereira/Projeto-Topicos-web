@@ -18,5 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::redirect('/', '/Filmes');
 
 Route::get('/Filmes', Filmes::class);
-
 Route::get('/Filmes/Cadastrar', Formulario::class);
+Route::get('/Filmes/{filme}/editar', Formulario::class);

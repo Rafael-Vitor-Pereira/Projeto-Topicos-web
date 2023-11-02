@@ -18,4 +18,11 @@ class FilmesFormObject extends Form
 
     #[Rule('required|string')]
     public $sinopse;
+
+    public function preencherDados($filme){
+        $this->nome = $filme->nome;
+        $this->diaria = $filme->diaria;
+        $this->sinopse = $filme->sinopse;
+        $this->classificacao = $filme->classificacao;
+    }
 }

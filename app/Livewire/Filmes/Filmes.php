@@ -23,6 +23,12 @@ class Filmes extends Component
         endif;
     }
 
+    public function deletar($id){
+        film::destroy($id);
+
+        $this->dispatch('ExibirMsg', 'Filme removido com sucesso!');
+    }
+
     public function render()
     {
         $this->filtro();
